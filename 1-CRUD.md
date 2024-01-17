@@ -15,9 +15,9 @@ Créer les fichiers :
 
 1. Définir une fonction `addPatient(lastName, firstName)` dans le fichier `patientService.js`
 
-2. Définir une fonction `insertPatient(patient) dans le fichier `patientDAO.js`
+2. Définir une fonction `insertPatient(patient)` dans le fichier `patientDAO.js`
 
-3. Définir un objet database dans le fichier `database.js` et ajouter une propriété `patient: []`
+3. Définir un objet `database` dans le fichier `database.js` et ajouter une propriété `patient: []`
 
 4. Définir une classe `Patient` dans le fichier `patient.js` avec les propriétés `id`, `lastName`, `firstName` et `creationDate`
 

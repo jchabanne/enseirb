@@ -42,7 +42,7 @@ Créer les fichiers :
 
 ## Améliorer la liste des patients
 
-1. Ajouter une propriété `patientList: []` dans la `database`
+1. Ajouter une propriété `patientList: []` dans l'objet `database`
 
 2. Modifier la fonction `addPatient` pour ajouter également un patient dans la propriété `patientList` mais sans la date de création
 
