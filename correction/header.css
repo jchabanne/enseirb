@@ -1,0 +1,7 @@
+header {
+    block-size: 10rem;
+    padding: var(--space-m);
+    font-size: clamp(20px, 3rem, 80px);
+    color: var(--color-primary);
+    border: var(--border);
+}

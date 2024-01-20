@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <meta charset="UTF-8" />
+    <title>XKCD Board</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="gallery.css" />
+    <link rel="stylesheet" href="footer.css" />
+
+    <style>
+        :root {
+            --color-primary: green;
+            --border: 2px solid crimson;
+
+            --space-s: 0.8rem;
+            --space-m: 1rem;
+            --space-l: 2rem;
+        }
+
+        html {
+            font-size: 100%;
+            line-height: 1.5;
+
+            .gallery {
+                margin-block: var(--space-l);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+
+    <body>
+        <header>XKCD Board</header>
+
+        <div class="gallery">
+            <img src="https://imgs.xkcd.com/comics/standards.png" />
+            <img src="https://imgs.xkcd.com/comics/exploits_of_a_mom.png" />
+            <img src="https://imgs.xkcd.com/comics/making_progress.png" />
+            <img src="https://imgs.xkcd.com/comics/usb_cables.png" />
+            <img src="https://imgs.xkcd.com/comics/haskell.png" />
+        </div>
+
+        <footer>Go to XKCD to read more !</footer>
+    </body>
+</html>
