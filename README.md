@@ -4,13 +4,13 @@
 
 Des normes existent pour définir différents critères qui permettent de valider qu'un site (ou application) est accessible au plus grand nombre.
 
-#### (WCAG)[https://www.w3.org/TR/WCAG22/] (Web Content Accessibility Guidelines)
+#### [WCAG](https://www.w3.org/TR/WCAG22/) (Web Content Accessibility Guidelines)
 
 Maintenu par le W3C dans le cadre du WAI (Web Accessibility Initiative)
 
 Version 2.2 depuis octobre 2023
 
-#### (RGAA)[https://accessibilite.numerique.gouv.fr/] (Référentiel Général d'Amélioration de l'Accessibilité)
+#### [RGAA](https://accessibilite.numerique.gouv.fr/) (Référentiel Général d'Amélioration de l'Accessibilité)
 
 Maintenu par le gouvernement
 
@@ -80,9 +80,9 @@ Editer le fichier `index.html`
 
 #### Partie 5 : flexbox
 
-(CSS Tricks)[https://css-tricks.com/snippets/css/a-guide-to-flexbox/]
+[CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-(Flexbox Froggy)[https://flexboxfroggy.com/]
+[Flexbox Froggy](https://flexboxfroggy.com/)
 
 1. Disposer les 2 sections côte à côte
 
@@ -90,7 +90,7 @@ Editer le fichier `index.html`
 
 #### Partie 6 : grid
 
-(CSS Tricks)[https://css-tricks.com/snippets/css/complete-guide-grid/]
+[CSS Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
 
 1. Disposer la sidebar, le header, les sections et le footer dans un *grid layout*
 
@@ -104,6 +104,6 @@ Editer le fichier `index.html`
 
 ## Ressources
 
-[https://lea.verou.me/]
+https://lea.verou.me/
 
-[https://www.joshwcomeau.com/]
+https://www.joshwcomeau.com/
