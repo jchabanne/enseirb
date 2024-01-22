@@ -1,0 +1,24 @@
+{
+  "name": "enseirb",
+  "version": "1.0.0",
+  "main": "src/index.mjs",
+  "type": "module",
+  "scripts": {
+    "api:clean": "docker stop feature-api; docker rmi feature/api",
+    "api:build": "docker buildx build -f api/Dockerfile -t feature/api .",
+    "api:run": "docker run -d --rm --name feature-api --network host feature/api",
+    "api:all": "npm run api:clean; npm run api:build; npm run api:run",
+    "nginx:clean": "docker stop feature-nginx; docker rmi feature/nginx",
+    "nginx:build": "docker buildx build -f nginx/Dockerfile -t feature/nginx ./nginx",
+    "nginx:run": "docker run -d --rm --name feature-nginx --network host feature/nginx",
+    "nginx:all": "npm run nginx:clean; npm run nginx:build; npm run nginx:run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "fastify": "^5.0.0",
+    "redis": "^4.7.0"
+  }
+}

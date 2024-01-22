@@ -1,0 +1,27 @@
+{
+  "name": "enseirb",
+  "version": "1.0.0",
+  "main": "src/index.mjs",
+  "type": "module",
+  "scripts": {
+    "api:clean": "docker stop feature-api; docker rmi feature/api",
+    "api:build": "docker buildx build -f api/Dockerfile -t feature/api .",
+    "api:run": "docker run -d --rm --network feature-net --name feature-api feature/api",
+    "api:all": "npm run api:clean; npm run api:build; npm run api:run",
+    "nginx:clean": "docker stop feature-nginx; docker rmi feature/nginx",
+    "nginx:build": "docker buildx build -f nginx/Dockerfile -t feature/nginx ./nginx",
+    "nginx:run": "docker run -d --rm --network feature-net -p 80:8080 --name feature-nginx feature/nginx",
+    "nginx:all": "npm run nginx:clean; npm run nginx:build; npm run nginx:run",
+    "redis:clean": "docker stop feature-redis;",
+    "redis:run": "docker run -d --rm --network feature-net -v feature-redis-data --name feature-redis redis:7.4.0-bookworm redis-server",
+    "redis:connect": "docker run -it --rm --network feature-net redis:7.4.0-bookworm redis-cli -h feature-redis"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "fastify": "^5.0.0",
+    "redis": "^4.7.0"
+  }
+}
