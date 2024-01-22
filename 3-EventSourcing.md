@@ -18,7 +18,7 @@ Créer les fichiers :
 
 1. Définir une fonction `restorePatient(id)` qui récupère tous les évènements du patient et reconstruit l'entité
 
-2. Modifier la fonction `savePatient` pour appeler la méthode `restorePatient`, ajouter un évèment `patientSaved` avec le nom et le prénom en payload, puis supprimer l'appel à la fonction `updatePatient`
+2. Modifier la fonction `savePatient` pour appeler la méthode `restorePatient`, ajouter un évèment `patientSaved` avec le patient en payload, puis supprimer l'appel à la fonction `updatePatient`
 
 ## Bonus : optimisation
 
