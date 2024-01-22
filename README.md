@@ -2,10 +2,10 @@
 
 > GLRT - IT340
 
-## [Clean code](./tree/clean-code)
+### [Clean code](/jchabanne/enseirb/tree/clean-code)
 
-## [Test](./tree/test)
+### [Test](/jchabanne/enseirb/tree/test)
 
-## [Architecture](./tree/architecture)
+### [Architecture](/jchabanne/enseirb/tree/architecture)
 
-## [WEB](./tree/web)
+### [WEB](/jchabanne/enseirb/tree/web)
