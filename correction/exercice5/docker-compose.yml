@@ -1,0 +1,47 @@
+name: feature
+
+services:
+  web:
+    image: feature/nginx
+    build:
+      context: ./nginx
+    container_name: feature-nginx
+    networks:
+      - feature-net
+    ports:
+      - "80:8080"
+    depends_on:
+      - api
+
+  api:
+    image: feature/api
+    build:
+      dockerfile: ./api/Dockerfile
+    container_name: feature-api
+    networks:
+      - feature-net
+    volumes:
+      - type: bind
+        source: ./api/.env
+        target: /usr/app/src/.env
+    depends_on:
+      - db
+
+  db:
+    image: redis:7.4.0-bookworm
+    container_name: feature-redis
+    networks:
+      - feature-net
+    volumes:
+      - type: volume
+        source: redis-data
+        target: /data
+
+networks:
+  feature-net:
+    driver: bridge
+    name: feature-name
+
+volumes:
+  redis-data:
+    name: feature-redis-data
