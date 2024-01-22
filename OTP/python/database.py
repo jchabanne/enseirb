@@ -1,0 +1,2 @@
+def fetchAccount(accountId):
+    pass
