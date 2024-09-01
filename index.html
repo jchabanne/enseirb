@@ -7,9 +7,39 @@
   <style>
     /* fichier header.css */
     
-    .header {
+body {
+	writing-mode: vertical-lr;
+}
+
+.header {
       padding: 20px;
       border: 2px solid blue;
+    }
+  </style>
+  
+  <style>
+    .header {
+      animation: font-slide 2s linear  infinite;
+    }
+    
+    @media (prefers-reduced-motion) {
+      .header {
+        animation: none;
+      }
+    }
+    
+    @keyframes font-slide {
+      from {
+        text-align: start;
+      }
+      
+      50% {
+        text-align: center;
+      }
+      
+      to {
+        text-align: end;
+      }
     }
   </style>
   

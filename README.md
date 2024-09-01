@@ -86,7 +86,7 @@ Editer le fichier `index.html`
 
 1. Disposer les 2 sections côte à côte
 
-2. AJouter une sidebar sur la gauche faisant toute la hauteur de la page
+2. Ajouter une sidebar sur la gauche faisant toute la hauteur de la page
 
 #### Partie 6 : grid
 
