@@ -1,0 +1,61 @@
+ARCHITECTURE CLIENT-SERVER
+--------------------------------------------------
+
+3 Tier
+----------------------------------------
+
+Presentation (client) <--> Application (service) <--> Database
+
+SOA
+----------------------------------------
+
+Terme générique compatible avec plusieurs modèles plus spécifiques 
+
+ - SOAP (Simple Object Access Protocol)
+ - REST
+ - WCF (Microsoft)
+ - gRPC (Google)
+ - ...
+
+Un peu d'histoire
+----------------------------------------
+Au début des années 90 des technos comme RMI / CORBA apparaissent (Netscape est sorti 94)
+-> Principe: invocation d'objet à distance
+-> contrainte pour RMI: Java uniquement
+
+Première version de SOAP en 99
+-> profite de l'adoption des technos HTTP / XML 
+
+En 2000 : REST -> qui sait d'où ça vient ? un chapitre de la thèse de Roy Fielding
+-> s'appuie sur des standards: HTTP, URL, Hypermedia
+-> ce n'est pas un standard à proprement parler, c'est plutôt une convention
+
+/!\ à bien définir les termes pour éviter les incompréhensions
+    RESTful est un terme "marketing"
+
+Un service CRUD
+----------------------------------------
+
+Implémenter un service permettant de créer un patient (nom, prénom), modifier un patient, récupérer la liste des patients et le détail d'un patient.
+Implémenter une pseudo base de données mémoire pour stocker l'état courant du système.
+Implémenter un fichier main simulant le client et qui appelle le service.
+
+Une version CQRS
+----------------------------------------
+
+Découpler la logique lecture de données de la logique modification de données.
+Permet d'avoir une lecture de données efficace adaptée aux besoins du client.
+On peut mettre en place des technos performantes en lecture et les mixer (redis, noSql, elastic search).
+
+Mais ça se fait au détriment de la cohérence des données.
+
+Une version event sourcing
+----------------------------------------
+
+Event sourcing = stocker l'évolution du système plutôt que l'état courant
+
+Il permet d'avoir nativement un audit trail (date, acteur...)
+
+Il facilie l'investigation des bugs en permettant de rejouer les évènements de la production
+
+Il permet de rollback plus facilement une action (les suppression deviennent logiques et les infos avant la suppression sont conservées dans les anciens évènements)

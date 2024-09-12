@@ -1,0 +1,76 @@
+Faire le récap
+--------------------------------------------------
+
+EXO
+----------------------------------------
+Test after ou TDD au choix
+
+Ecrire un programme qui valide les mots de passe
+ 1. vérifier que le mot de passe fait au moins 8 caractères
+ 2. vérifier que le mot de passe contient au moins 1 chiffre
+ 3. vérifier que le mot de passe contient au moins 1 lettre
+    ----------
+ 4. vérifier que le mot de passe contient au moins 1 caractère spécial
+    ----------
+ 5. pouvoir paramétrer les régles de validation
+    - longueur du mot de passe
+    - nombre de chiffres
+    - nombre de letres
+    - liste de caractères spéciaux
+    ---------- 
+ 6. pouvoir ajouter une régle custom
+
+Ne pas oublier le rectactoring, même en test after !
+
+Avantage TDD : génération de code
+
+---------------------------------------- 
+
+Faire le point
+-> astuce convertir test after en TDD (commenter le code)
+
+--------------------------------------------------
+
+MOCK
+
+ 1. Créer un fichier bank.js
+ 2. Dans ce fihcier, créer une fonction getBalance()
+ 3. Créer un fichier bankDAO.js
+ 4. Dans ce fichier, créer une fonction retrieveBalance() qui affiche un log "Retrieve balance"
+ 5. Appeler la fonction retieveBalance depuis la fonction getBalance
+
+=> écrire un test qui valide qu'on appelle la fonction retrieveBalance mais sans vraiment exécuter cette dernière
+   (il ne faut pas voir le log s'afficher dans la console des tests)
+
+ 6. Ajouter un paramètre accountId aux fonctions getBalance et retrieveBalance
+
+=> modifier le test pour vérifier que le paramètre est bien transmis à la fonction retrieveBalance
+
+ 7. Modifier la fonction getBalance pour retourner le solde retourné par la fonction retrieveBalance
+
+=> modifier le test pour valider le solde retourné par la fonction getBalance
+
+/!\ Bien identifier le SUT (on ne valide pas la DAO, uniquement le fichier bank.js)
+
+Terminologie : mock, fake, stub, spy
+
+----------------------------------------
+
+ 1. Dans le fichier bank.js, créer une fonction transferMoney qui prend 2 paramètres : accountId et amount
+ 2. Créer un fichier transferBus.js
+ 3. Dans ce fichier, créer une fonction transfer qui prend 2 paramètres (accountId et amount)
+ 4. Appeler la fonction transfer depuis la fonction transfertMoney en passant les 2 paramètres
+
+=> écrire un test
+
+ 5. Dans le fichier bankDAO.js, créer une fonction debitAccount qui prend 2 paramètres (accountId et amount)
+ 6. Appeler la fonction debitAccount depuis la fonction transfertMoney
+
+=> écrire un test
+
+ 7. Si le transfer ne se passe pas bien (la fonction transfer retourne une promesse rejetée), ne pas appeler la fonction debitAccount
+    Si le transfer se passe bien (la fonction transfer retourne une promesse résolue), appeler la fonction debitAccount
+
+=> écrire un test
+
+

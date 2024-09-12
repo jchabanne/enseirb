@@ -1,0 +1,75 @@
+Récap
+--------------------------------------------------
+SVN -> système centralisé
+GIT -> système décentralisé (mais utilisé généralement comme un système centralisé)
+
+Pourquoi utiliser un système de gestion de source ?
+ - backup (crash HDD, absence, perte ordi, ...)
+ - historique
+ - partage
+
+Un exemple de flow : master -> develop -> feature branch
+                            -> fix branch
+
+Merge vs Rebase
+Squash
+/!\ ne pas faire n'importe quoi sur develop ni master
+
+-------------------------
+
+Qualité / lisibilité du code
+=> REFACTORING = modification du code à fonctionnaliés équivalentes
+
+ - duplication
+ - nommage (variable, function, classe, fichier, répertoire,...)
+ - découpage (modularité)
+ - longueur (function, classe, fichier)
+ - paramètres de function
+ - commentaire
+
+=> c'est une chance qu'on a dans notre métier
+   un coiffeur ne peut pas le faire
+
+=> vous n'écrirez pas un bon code du premier coup
+
+==================================================
+
+Test
+--------------------------------------------------
+
+Qui teste son code ? Comment ? Après chaque modification ?
+Qui a déjà écrit un test automatisé ?
+
+Pourquoi écrire des tests ? (2 raisons)
+ - validation des dev en cours
+ - non régréssion
+
+Quoi tester ?
+
+* Pyramide des tests (pas de normalisation de la nomenclature)
+
+* Test runner / assert library
+
+* Anatomie d'un test
+ - given / when / then
+ - arrange / act / assert
+-------------------------
+
+Exo test after
+-> function cypher : replace letters by hyphen 
+                     if +10 chars : replace letters by dash 
+                     if starts with 'a' : replace letters by *
+
+-> function addPrefix : ajouter un préfixe "foo" selon un paramètre booléen
+
+On efface le code et on fait en TDD
+Cycle du TDD : red -> green -> refacto
+Un test vert du premier coup est un test inutile (dans la plupart des cas)
+
+Inconvénient test after :
+ - risque de couverture partielle (il faut 2 tests pour valider un if)
+ - code pas vraiment "testable"
+
+Règle: ne pas adapter le code de production pour faciliter les tests (function privée rendu publique)
+
+Convertir du test after en TDD => commenter son code et décommenter au fur et à mesure

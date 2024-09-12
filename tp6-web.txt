@@ -1,0 +1,58 @@
+# WEB
+
+### Préambule
+
+Le développeur a une responsabilité sur le code qu'il écrit :
+ - en cas de bug (généralement technique)
+ - en cas de non conformité avec une legislation (type RGPD, accessibilité)
+ - en cas d'implémentation immorale (mot de passe en clair, connexion sur un compte client)
+
+## Accessibilité (A11y)
+
+Des normes existent pour définir des critères qui permettent de valider qu'un site est accessible au plus grand nombre.
+
+#### WCAG (Web Content Accessibility Guidelines)
+
+Maintenu par le W3C dans le cadre du WAI (Web Accessibility Initiative)
+
+Version 2.2 depuis octobre 2023
+
+#### RGAA (Référentiel Général d'Amélioration de l'Accessibilité)
+
+Maintenu par le gouvernement
+
+Version 4.1.2
+
+### Quelques critères
+
+ - contraste
+ - la police en elle même et sa taille
+ - l'espacement entre les lettres et les lignes
+ - les balises ARIA ou l'utilisation d'éléments standards
+ - la désactivation des animations
+
+**Attention**: ce n'est pas parce qu'on met des balises ARIA partout comme il faut que le site est accessible en pratique.
+
+## CSS
+
+### Partie 1 : custom properties
+
+Point 1: Comment réagir si la charte graphique donnée ne respecte pas les règles d'accessibilité
+
+### Partie 2 : relative units
+
+Différence entre `rem` et `em`
+
+Fonctions `min`, `max` et `clamp`
+
+### Partie 3 : logical properties & values
+
+Elles sont relatives au flux (contrairement aux propriétés et valeurs physiques).
+
+Elles permettent de s'adapter à l'orientation du texte selon la langue.
+
+> Jouer avec la propriété `writing-mode` (sur le body)
+
+### Partie 4 : unités relatives
+
+Différence entre vh/vw et dvh/dvw
